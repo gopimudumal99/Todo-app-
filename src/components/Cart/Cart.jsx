@@ -21,7 +21,7 @@ function Cart() {
   }
 
 
-  return (
+  return data.length ===0 ? <h1 className='cart-empty'>Cart is Empty</h1> :(
     <div className='cart-cont'>
       {data.map((x)=>{
         return(

@@ -35,3 +35,10 @@
     align-items: center;
     gap: 20px;
 }
+
+.cart-empty{
+    margin-top: 230px;
+    text-align: center;
+    font-size: 48px;
+}
+

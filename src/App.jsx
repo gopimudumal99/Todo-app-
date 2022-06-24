@@ -6,6 +6,8 @@ import Products from "./components/Products/Products";
 import {Route,Routes} from 'react-router-dom'
 import Cart from "./components/Cart/Cart";
 import Product from "./components/Product/Product";
+import ErrorPage from "./Error/ErrorPage";
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,7 @@ function App() {
         <Route path="/products" element={ <Products/>}/>
         <Route path="/products/:id" element={ <Product/>}/>
         <Route path="/cart" element={ <Cart/>}/>
+        <Route path='*' component={<ErrorPage/>} />
       </Routes>
     </div>
   );
