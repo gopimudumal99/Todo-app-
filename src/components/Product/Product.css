@@ -1,0 +1,40 @@
+.prod-cont{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.prod-img{
+    width: 50%;
+    height: 400px;
+}
+
+.prod-img>img{
+    width: 90%;
+}
+
+.prod-rate{
+    font-size: 20px;
+    font-weight:300;
+}
+
+.prod-price{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.prod-desc{
+    width: 600px;
+    text-align: justify;
+}
+
+.prod-btns{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+
