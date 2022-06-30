@@ -10,6 +10,7 @@ const cartSlice = createSlice({
         addItem:(state,action)=>{
             const exits = state.products.find(prod=>prod.id === action.payload.id)
             if(exits){
+                alert("increased the qty of this product in cart")
                 state.products = state.products.map(prod=>prod.id === action.payload.id ? {...prod, qty:prod.qty+1 }:prod)
             }else{
                 alert("product is added to the cart")
