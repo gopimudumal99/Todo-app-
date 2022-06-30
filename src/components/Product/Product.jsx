@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React,{useEffect,useState,memo} from 'react'
 import {Link,useParams} from 'react-router-dom'
 import "./Product.css"
 import {useDispatch} from 'react-redux'
@@ -64,4 +64,4 @@ function Product() {
   )
 }
 
-export default Product
+export default memo(Product)

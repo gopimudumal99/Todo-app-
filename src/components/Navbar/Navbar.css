@@ -10,7 +10,7 @@ nav ul{
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     background: black;
-    padding: 30px;
+    padding: 15px;
 }
 
 a{
@@ -18,5 +18,12 @@ a{
     color: white;
     font-size: 25px;
     font-weight: 600;
+    font-size: 30px;
 }
 
+.cart-logo{
+    color: red;
+    top: -12px;
+    position: relative;
+    font-size: 20px;
+}

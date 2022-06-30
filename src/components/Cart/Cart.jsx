@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,memo} from 'react'
 import "./Cart.css"
 import {useSelector,useDispatch} from 'react-redux'
 import {addItem,removeItemQty,getTotoal,removeItem} from "../../reduxToolKit/createSlice"
@@ -60,4 +60,4 @@ function Cart() {
   )
 }
 
-export default Cart
+export default memo(Cart)

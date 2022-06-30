@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState,memo } from 'react'
 import "./Products.css"
 import {Link} from 'react-router-dom'
 function Products() {
@@ -78,4 +78,4 @@ function Products() {
   )
 }
 
-export default Products
+export default memo(Products)
