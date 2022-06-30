@@ -2,7 +2,6 @@ import React,{useEffect,useState,memo} from 'react'
 import {Link,useParams} from 'react-router-dom'
 import "./Product.css"
 import {useDispatch} from 'react-redux'
-// import { addCart } from '../../redux/actions/index.js'
 import {addItem} from "../../reduxToolKit/createSlice"
 function Product() {
     const {id} = useParams();
