@@ -2,8 +2,8 @@ import React,{useEffect,useState} from 'react'
 import {Link,useParams} from 'react-router-dom'
 import "./Product.css"
 import {useDispatch} from 'react-redux'
-import { addCart } from '../../redux/actions/index.js'
-
+// import { addCart } from '../../redux/actions/index.js'
+import {addItem} from "../../reduxToolKit/createSlice"
 function Product() {
     const {id} = useParams();
     const [product,setProduct] = useState("");
@@ -22,7 +22,7 @@ function Product() {
     },[id])
 
     const addProduct = (product)=>{
-        dispatch(addCart(product))
+        dispatch(addItem(product))
     }
 
     const ShowProduct = () => {

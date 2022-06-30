@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     gap: 40px;
+    position: relative;
 }
 
 .prod-cart{
@@ -42,3 +43,18 @@
     font-size: 48px;
 }
 
+.cart-total{
+    position: fixed;
+    bottom: 15px;
+    right: 50px;
+    border: 1px solid black;
+    padding:0 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+.cart-total>h3>span{
+    color:red;
+}

@@ -1,15 +1,18 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import "./Cart.css"
 import {useSelector,useDispatch} from 'react-redux'
-import { addCart, deleteCart } from '../../redux/actions/index.js'
-
+import {addItem,removeItemQty,getTotoal,removeItem} from "../../reduxToolKit/createSlice"
 function Cart() {
-  const data = useSelector((state)=>state.hadleCart)
+  const {products,totalAmount} = useSelector((state)=>state.cart)
 
   const dispatch = useDispatch()
   
+  useEffect(()=>{
+      dispatch(getTotoal())
+  },[products,dispatch])
+
   const handlebtnPlus = (product)=>{
-    dispatch(addCart(product))
+    dispatch(addItem(product))
   }
 
 
@@ -17,13 +20,13 @@ function Cart() {
     if (product.qty === 1) { 
       alert("product is removed from the cart")
   }
-       dispatch(deleteCart(product));
+       dispatch(removeItemQty(product));
   }
 
 
-  return data.length ===0 ? <h1 className='cart-empty'>Cart is Empty</h1> :(
+  return products.length ===0 ? <h1 className='cart-empty'>Cart is Empty</h1> :(
     <div className='cart-cont'>
-      {data.map((x)=>{
+      {products.map((x)=>{
         return(
           <div key={x.id} className='prod-cart'>
             <div className="cart-img">
@@ -40,12 +43,18 @@ function Cart() {
               <button className="prod-minus buyBtn" onClick={() => handlebtnMinus(x)}>
                   -</button>
               <button  className="prod-plus buyBtn" onClick={() => handlebtnPlus(x)}>
-                  +</button>        
+                  +</button>
+              <button  className="prod-plus buyBtn" onClick={() => dispatch(removeItem(x))}>
+                  Remove</button>          
                </div>
             </div>
           </div>
         )
       })}
+
+      <div className="cart-total">
+        <h3>Total Price: <span>$ {totalAmount}</span></h3>
+      </div>
 
     </div>
   )
