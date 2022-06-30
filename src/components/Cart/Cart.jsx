@@ -1,12 +1,13 @@
 import React,{useEffect,memo} from 'react'
 import "./Cart.css"
 import {useSelector,useDispatch} from 'react-redux'
+import {MdDelete} from 'react-icons/md'
 import {addItem,removeItemQty,getTotoal,removeItem} from "../../reduxToolKit/createSlice"
+
 function Cart() {
   const {products,totalAmount} = useSelector((state)=>state.cart)
-
   const dispatch = useDispatch()
-  
+
   useEffect(()=>{
       dispatch(getTotoal())
   },[products,dispatch])
@@ -40,12 +41,12 @@ function Cart() {
                    {x.qty} X ${x.price} = ${x.price * x.qty}
                </p>
                <div className="buttons">
-              <button className="prod-minus buyBtn" onClick={() => handlebtnMinus(x)}>
+              <button className="prod-minus buyBtn" title='-1 Qnty' onClick={() => handlebtnMinus(x)}>
                   -</button>
-              <button  className="prod-plus buyBtn" onClick={() => handlebtnPlus(x)}>
+              <button  className="prod-plus buyBtn" title='+1 Qnty' onClick={() => handlebtnPlus(x)}>
                   +</button>
-              <button  className="prod-plus buyBtn" onClick={() => dispatch(removeItem(x))}>
-                  Remove</button>          
+              <button  className="prod-plus buyBtn" title='Remove' onClick={() => dispatch(removeItem(x))}>
+              <MdDelete/></button>          
                </div>
             </div>
           </div>
