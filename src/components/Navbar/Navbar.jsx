@@ -1,7 +1,6 @@
 import React,{memo} from 'react'
 import {BsCartCheckFill} from 'react-icons/bs'
 import{BiStoreAlt} from'react-icons/bi'
-import{AiOutlineHome} from 'react-icons/ai'
 import {GiCondorEmblem} from 'react-icons/gi'
 
 
@@ -16,7 +15,6 @@ function Navbar() {
         <nav>
             <ul>
                 <li><Link to="/">G<GiCondorEmblem/>M</Link></li>
-                <li><Link to="/"><AiOutlineHome/></Link></li>
                 <li><Link to="/products"><BiStoreAlt/></Link></li>
                 <li ><Link to="/cart"><BsCartCheckFill/><span className='cart-logo'>{data?data.length:0}</span></Link></li>
             </ul>

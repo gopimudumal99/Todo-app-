@@ -17,7 +17,7 @@ function App() {
         <Route path="/products" element={ <Products/>}/>
         <Route path="/products/:id" element={ <Product/>}/>
         <Route path="/cart" element={ <Cart/>}/>
-        <Route path='*' component={<ErrorPage/>} />
+        <Route path='*' element={<ErrorPage/>} />
       </Routes>
     </div>
   );

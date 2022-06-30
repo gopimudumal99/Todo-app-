@@ -1,8 +1,9 @@
 .prod-cont{
-    width: 80%;
+    min-width:1000px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 30px;
     padding: 30px;
 }
 
@@ -13,6 +14,7 @@
 
 .prod-img>img{
     width: 90%;
+    height:70%;
 }
 
 .prod-rate{
@@ -28,6 +30,7 @@
 .prod-desc{
     width: 600px;
     text-align: justify;
+    font-size: 15px;
 }
 
 .prod-btns{
