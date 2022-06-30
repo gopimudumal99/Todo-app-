@@ -14,9 +14,9 @@ function Navbar() {
   return (
         <nav>
             <ul>
-                <li><Link to="/">G<GiCondorEmblem/>M</Link></li>
-                <li><Link to="/products"><BiStoreAlt/></Link></li>
-                <li ><Link to="/cart"><BsCartCheckFill/><span className='cart-logo'>{data?data.length:0}</span></Link></li>
+                <li title='Home'><Link to="/">G<GiCondorEmblem/>M</Link></li>
+                <li title="Products"><Link to="/products"><BiStoreAlt/></Link></li>
+                <li title='cart'><Link to="/cart"><BsCartCheckFill/><span className='cart-logo'>{data?data.length:0}</span></Link></li>
             </ul>
         </nav>
   )

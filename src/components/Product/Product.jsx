@@ -40,7 +40,7 @@ function Product() {
                 <div className='prod-btns'>
                 <button className='buyBtn' onClick={()=>addProduct(product)}>Add to Cart</button>
                 <Link to="/cart">
-                <button className='buyBtn'>Go to Cart</button>
+                <button className='buyBtn' style={{backgroundColor:"black",color:"white"}}>Go to Cart</button>
                 </Link>
                 </div>
             </div>
